@@ -13,6 +13,11 @@ public class CameraController : MonoBehaviour
 	public List<Vector2> velocities = new List<Vector2>();
 	public Vector2 prevVel, currentVel;
 
+	public float smoothing;
+	public Vector2 prevDir;
+
+	public float directPlayerPosWeight;
+
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -54,7 +59,17 @@ public class CameraController : MonoBehaviour
 		if (Mathf.Abs(dir.x) > Mathf.Abs(targetPos.x - transform.position.x)) dir.x = targetPos.x - transform.position.x;
 		if (Mathf.Abs(dir.y) > Mathf.Abs(targetPos.y - transform.position.y)) dir.y = targetPos.y - transform.position.y;
 
+		if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S))
+		{
+			Vector2 dirToPlayer = target.position - transform.position;
+			dirToPlayer *= directPlayerPosWeight;
+			dir += dirToPlayer;
+		}
+
+		dir = prevDir * smoothing + dir * (1 - smoothing);
 		transform.Translate(dir);
+
+		prevDir = dir;
 	}
 
 	public void UpdateVelocities()

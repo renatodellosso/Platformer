@@ -6829,8 +6829,32 @@ PrefabInstance:
       value: 4.75
       objectReference: {fileID: 0}
     - target: {fileID: 5292701690962831052, guid: c3dfcc4fe399d6b4787e20baaa9ba480, type: 3}
+      propertyPath: velSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5292701690962831052, guid: c3dfcc4fe399d6b4787e20baaa9ba480, type: 3}
+      propertyPath: smoothing
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5292701690962831052, guid: c3dfcc4fe399d6b4787e20baaa9ba480, type: 3}
+      propertyPath: mouseWeight
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5292701690962831052, guid: c3dfcc4fe399d6b4787e20baaa9ba480, type: 3}
+      propertyPath: maxMouseDist
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5292701690962831052, guid: c3dfcc4fe399d6b4787e20baaa9ba480, type: 3}
       propertyPath: velUpdateSpeed
-      value: 0.5
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5292701690962831052, guid: c3dfcc4fe399d6b4787e20baaa9ba480, type: 3}
+      propertyPath: maxDistFromPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5292701690962831052, guid: c3dfcc4fe399d6b4787e20baaa9ba480, type: 3}
+      propertyPath: directPlayerPosWeight
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5292701690962831053, guid: c3dfcc4fe399d6b4787e20baaa9ba480, type: 3}
       propertyPath: orthographic size
